@@ -1,0 +1,28 @@
+table{
+    background-color: rgb(204, 119, 16);
+    border-radius: 2px;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+.container h2{
+    background-color: rgb(1, 31, 43);
+    color: white;
+    font-style: oblique;
+}
+.container ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 20px;
+    font-size: 25px;
+}
+.container ul li a{
+    color: red;
+    background-color: thistle;
+    text-decoration: none;
+    border-radius: 1rem;
+}
+.container ul li a:hover{
+    color: white;
+    background-color: blue;
+    text-decoration: none;
+}

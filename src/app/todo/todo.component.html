@@ -1,0 +1,35 @@
+<section class="main-section">
+    <div class="container">
+        <p>todo number list</p>
+        <div class="row">
+            <div class="col-md-6">
+                <ul>
+                    <li *ngFor="let list of array">No {{list}}</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <button (click)="onShow($event)" class="btn btn-primary"> show hide</button>
+                <ul *ngIf="istrue">
+                    <li *ngFor="let listitem of arrays">no:{{listitem}}</li>
+                </ul>
+               
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+Hi:{{name}}
+{{myarray[0]}}
+{{myarray[1]}}
+{{myarray[2]}}
+<ol>
+    <li *ngFor="let list of myarray">{{myarray[2]}}</li>
+</ol>
+<div *ngIf="istrue">
+    <P>this is if condition</P>
+    <h2>{{myarray[0] | uppercase}}</h2>
+    <h2>{{myarray[0] | lowercase}}</h2>
+</div>

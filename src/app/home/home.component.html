@@ -1,0 +1,94 @@
+<h4>child data</h4>
+      {{parentData}}
+      {{sendData}}
+
+
+
+<section class="page-block card-section pt-4 pb-4">
+    <div class="container">
+
+        <h1>this is use for custom styling using directive</h1>
+        <h2>simple style</h2>
+        <h2 appCustomStyle>custom style</h2>
+
+    </div>
+</section>
+<!-- Section Cards-->
+<section class="page-block card-section pt-4 pb-4">
+    <div class="container">
+        <h3>Bootstrap Card image</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <!-- Cards Start -->
+                <div class="card">
+                    <img class="card-img-top" src="assets/images/image1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title" appCustomStyle>Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Cards Start -->
+                <div class="card">
+                    <img class="card-img-top" src="assets/images/image1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title" appCustomStyle>Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Button</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Cards Start -->
+                <div class="card">
+                    <img class="card-img-top" src="assets/images/image1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title" appCustomStyle>Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">button</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <ul>
+                <li><a routerLink='/login'>login</a></li>
+                <li><a routerLink='/signup'>signup</a></li>
+            </ul>
+        </div>
+        <router-outlet></router-outlet>
+        <!-- <div class="container">
+          <h2>Angular module tutorials</h2>
+          <app-login></app-login>
+          <app-signup></app-signup>
+          <button class="btn btn-secondary mb-2" (click)="getName('Hi-Hamid')">clickMe</button>
+          <input type="text" (keyup)="getName('pressKey')">
+        </div> -->
+        <div class="container ">
+            <h2>using service get data from IPs</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">sr.no</th>
+                        <th scope="col">Userid</th>
+                        <th scope="col">User Title</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of userList ; let i = index">
+                        <td scope="row">{{i + 1}}</td>
+                        <td>{{user.userId}}</td>
+                        <td>{{user.title}}</td>
+                        <td>{{user.completed}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+      

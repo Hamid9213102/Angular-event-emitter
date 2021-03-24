@@ -1,0 +1,37 @@
+
+<app-header></app-header>
+<div class="content" role="main">
+  <router-outlet></router-outlet>
+</div>
+<div class="container">
+  <table>
+    <tr>
+      
+      <th>Name</th>
+      <th>color</th>
+    </tr>
+    <tr *ngFor="let cars of cars">
+      <td>{{cars.name}}</td>
+      <td>{{cars.color}}</td>
+    </tr> 
+  </table>
+</div>
+<div class="container">
+  <div class="card">
+      <div class="card-header">
+          <h2>parent-component</h2>
+      </div>
+      <div class="card-body">
+          <label>pass-data</label>
+          <input type="text" class="form-control" [(ngModel)]="parentData"/>
+          <button class="btn btn-primary" (click)="transferData()">Add-Data</button>
+          
+          <app-home [parentData]="parentData"></app-home>
+          {{parentData}}
+          <app-root (sendData="parentData($event)")></app-root>
+      </div>
+
+  </div>
+</div>
+
+  

@@ -1,0 +1,16 @@
+<h2>parent-to-child data transfer</h2>
+<div >
+    <table border="1px " >
+        <tr>
+        <th>parent-name</th>
+        <th>age</th>
+        <th>nationality</th>
+        </tr>
+        <tr *ngFor="let parent of namesArry">
+            <td>{{parent.name}}</td>
+            <td>{{parent.age}}</td>
+            <td>{{parent.nationality}}</td>
+        </tr>
+        
+    </table>
+</div>
